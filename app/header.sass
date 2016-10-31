@@ -1,0 +1,206 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+*
+	outline: none
+	
+.hidden 
+	display: none
+
+strong, b, 
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+
+
+h1, h2, h3, h4, h5, h6, .button,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "Raleway", sans-serif
+	font-weight: 700
+	text-transform: uppercase
+a 
+	outline: none!important
+ul,li
+	padding: 0
+	margin: 0
+	list-style-type: none
+
+.buttons
+	i 
+		font-size: 20px
+		margin-right: 10px
+	&:focus
+		boreder: none
+
+.main-head
+	min-height: 700px
+	position: relative
+.bgi-head
+	background-size: cover
+	@extend .divabs
+	filter: blur(4px)
+.bgc-head
+	@extend .divabs
+	background-color: #111
+	opacity: .3
+
+.top-line
+	background-color: rgba(#000,.4)
+	color: #fff
+	padding: 25px 0
+	position: relative
+
+//logo
+@keyframes logo
+	50%
+		transform: rotate(40deg) translateX(10px)
+	100%
+		transform: rotate(-20deg) translateX(-2px)
+.logo
+	&:hover
+		img 
+			animation: logo 2s alternate
+		&__head
+			transform: rotate(9deg)
+	img
+		width: 50px
+		height: 50px
+		display: inline-block
+	&__head
+		display: inline-block
+		vertical-align: top
+		font-family: "NautilusPompiliusRegular", sans-serif
+		font-size: em(24)
+		line-height: em(16)
+		transform: rotate(-9deg)
+		padding-left: 12px
+		span
+			color: $accent-color
+
+//menu
+.main-menu
+	&__item
+		display: inline-block
+		padding: 10px 15px
+		a 
+			text-transform: uppercase
+			font-size: em(12)
+			position: relative
+			&:after 
+				content: ''
+				position: absolute
+				width: 100%
+				height: 1px
+				bottom: -2px
+				left: 0
+				background-color: $accent-color
+				transform: scaleX(0)
+				transform-origin: bottom right
+				transition: transform 0.3s
+			&:hover 
+				&:after 
+					transform-origin: bottom left
+					transform: scaleX(1)
+				.main-menu
+					&__item
+						i
+							background-color: $accent-color
+		i
+			width: 22px
+			height: 22px
+			text-align: center
+			line-height: 20px
+			border-radius: 10em
+			opacity: .6
+			margin-right: 6px
+		&--active
+			a 
+				color: $accent-color
+				text-decoration: none
+			i 
+				background-color: $accent-color
+				color: $dark-color
+
+//mobile
+@keyframes shake
+	10%, 90% 
+		transform: translate3d(-2px, 0, 0)
+	30%, 60%
+		transform: translate3d(0px, 2px, 0)
+	50%, 100%
+		transform: translate3d(1, -2px, 0)
+
+.mobile
+	text-align: right
+	vertical-align: middle
+	cursor: pointer
+	&:hover
+		i
+			animation-duration: 0.2s
+			animation-name: shake
+			animation-iteration-count: infinite
+			animation-direction: alternate
+			transition: all .25s 
+			font-size: em(20)
+	&__title
+		display: block
+		opacity: .7
+		font-size: em(12)
+		margin: 0
+		letter-spacing: 1px
+		line-height: em(16)
+	&__call
+		margin: 0
+		font-size: em(20)
+		font-family: "Roboto Condensed"
+		font-weight: 700
+		span
+			font-size: 16px
+			padding-left: 8px
+		i 
+			color: $accent-color
+
+//slider
+//анимация для слайда
+.animated  
+	animation-duration : 1000 ms  
+	animation-fill-mode : both  
+
+.owl-animated-out 
+	z-index : 1 
+
+.owl-animated-in 
+	z-index : 0 
+
+.fadeOut 
+	animation-name : fadeOut  
+
+@keyframes  fadeOut  
+	0% 
+		opacity : 1   
+	100% 
+		opacity : 0   
+
+.sl
+	position: relative
+	&-head /// главный слайдер
+		padding-top: 60px
+		margin-bottom: 170px
+		color: #fff
+	&__title
+		font-family: "IsadoraBold", sans-serif
+		text-transform: none
+		font-size: em(52)
+		font-weight: normal
+		line-height: em(20)
+		margin-top: 120px
+	&__desc
+		opacity: .8
+		font-weight: 300
+		margin-bottom: 40px
+	&__img
+		img 
+			width: 100%
+	.slick-next:before, 
+	.slick-prev:before
+		font-size: 36px

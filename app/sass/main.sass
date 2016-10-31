@@ -1,0 +1,349 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+
+.sect
+	position: relative
+	&__head
+		font-size: em(24)
+		font-weight: 900
+		text-align: center
+		padding: 70px 0 30px
+		margin: 0
+		z-index: 2
+
+.btn-down
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translate(-50%, -50%)
+	background-color: $accent-color
+	border-radius: 10em
+	width: 60px
+	height: 60px
+	text-align: center
+	line-height: 60px
+	font-size: 26px
+	color: #fff
+
+/*секции пицца, салаты, напитки*/
+.select
+	&-pizza
+		background-color: #fff
+		position: relative
+		top: -100px
+		box-shadow: 0 0 15px 0 rgba(#000, .2)
+		&__head
+			padding-bottom: 60px
+	&-size
+		padding-bottom: 30px
+		padding-left: 35px
+		&__btn
+			vertical-align: middle
+		.price
+			background-color: $accent-color
+			color: #fff
+			padding: 15px 20px
+			font-size: em(20)
+			font-family: "roboto", sans-sirif
+			float: right
+			transform: translateX(15px)
+	&-snack
+		background-image: url("../img/salat.jpg")
+		background-size: cover
+		position: relative
+		color: #fff
+		text-align: center
+		&__desc
+			font-size: em(18)
+			opacity: .9
+			font-weight: normal
+			margin-bottom: 70px
+	&-drink
+		text-align: center
+		&__head
+			margin-bottom: 20px
+		&__desc
+			margin-bottom: 80px
+			opacity: .7
+
+.pay
+	color: #fff
+	padding: 0 0 50px
+	text-align: center
+	&__head
+		margin-top: 80px
+	&__desc
+		font-size: em(18)
+		opacity: .7
+		font-weight: 300
+		line-height: em(28)
+
+/*слайдеры пицца, салаты, напитки*/
+.sl
+	&-second
+		color: #000
+		&__item
+			margin: 0 20px 40px
+		&__img
+			background-image: url("../img/flour.jpg")
+			width: 100%
+			height: 100%
+			background-size: cover
+			position: relative
+			background-position: center center
+			img
+				width: 100%
+				height: 100%
+				padding: 40px
+		&__head
+			font-weight: 700
+			font-size: em(18)
+		&__desc
+			opacity: .9
+		&__comp
+			opacity: .6
+			font-size: em(14)
+			margin-bottom: 32px
+			span
+				font-weight: bold
+		&-dots
+			display: block
+		&-snack
+			background-color: #FFF
+		.slick-dots 
+			li
+				button
+					background-color: $accent-color
+				&.slick-active
+					button
+						opacity: .9
+		.slick-next
+			right: -6% 
+		.slick-prev
+			left: -6%
+		.slick-next:before, 
+		.slick-prev:before
+			color: $accent-color
+			font-size: 36px
+		.slick-dots
+			margin-bottom: 80px
+			margin-top: 10px
+			position: relative
+			li 
+				margin: 0 10px
+				button
+					width: 15px
+					height: 15px
+	&-snack
+		&__item
+			background-color: #FFF
+			text-align: center
+		&__img
+			width: 100%
+			height: 200px
+		&__head
+			margin-top: -20px
+			margin-bottom: 30px
+		&__round
+			background-color: $accent-color
+			display: inline-block
+			transform: translateY(-50%)
+			text-align: center
+			border-radius: 10em
+			padding: 32px 10px
+			color: #fff
+			font-family: "roboto", sans-serif
+		&__content
+			padding: 0 20px 
+		&__comp
+			background-color: $bgc-color
+			margin: 0
+			padding: 20px
+			opacity: .8
+		&__btn
+			display: block
+			width: 100%
+		.slick-next:before, 
+		.slick-prev:before
+			color: #fff
+		.slick-dots 
+			margin-bottom: 100px
+			li
+				button
+					background-color: #fff
+	&-drink
+		text-align: center
+		overflow: hidden
+		&__img
+			display: inline-block
+			margin-bottom: 20px
+			img
+				width: 100%
+				transition: all .3s 
+		&__head
+			margin-bottom: 0
+		&__price
+			margin-top: 10px
+			font-size: em(14)
+			opacity: .6
+			font-weight: 700
+			margin-bottom: 30px
+			span
+				font-size: em(24)
+
+.contanct
+	margin: 80px 0
+
+.main-form
+	&__head
+		margin-top: 0
+		font-size: em(24)
+		font-weight: 800
+	&__desc
+		margin-top: 0
+		margin-bottom: 50px
+		font-size: em(18)
+		opacity: .9
+		font-weight: 300
+	&__label
+		display: block
+		margin-bottom: 25px
+		span
+			display: block
+			font-size: em(13)
+			font-weight: italic
+			opacity: .8
+			margin-bottom: 8px
+		textarea
+			resize: none
+			padding-top: 10px
+			@extend .main-form__input
+			height: 100px
+	&__input
+		width: 100%
+		background-color: darken($bgc-color, 2%)
+		border: none
+		line-height: 40px
+		font-size: em(18)
+		padding: 0 15px
+		color: #000
+		border: 1px solid darken($bgc-color, 10%)
+		transition: all .3s 
+		&:focus
+			border: 1px solid $accent-color
+
+.order
+	background-color: $dark-color
+	color: #fff
+	padding: 30px
+	text-align: center
+	&-wrap
+		border: 1px solid lighten($dark-color, 10%)
+		padding: 20px 20px 50px
+	&__head
+		font-size: em(30)
+		font-weight: 900
+		margin-bottom: 50px
+		span
+			color: $accent-color
+	&__item
+		&-del
+			display: block
+			float: left
+			color: #b12a2a
+			font-size: em(24)
+			height: 24px
+			margin-right: 20px
+			clear: both
+			background-color: transparent
+			border: none
+			line-height: 10px
+			&:hover
+				color: lighten(#b12a2a, 10%)
+				cursor: pointer
+		&-line
+			margin: 0
+			margin-bottom: 20px
+			font-size: em(15)
+			opacity: .8
+			text-align: left
+	&__items 
+		border-bottom: 1px solid lighten($dark-color, 10%)
+	&__result
+		font-size: em(26)
+		font-weight: 900
+		margin: 50px 0
+		span
+			color: $accent-color
+	&__reset
+		background-color: transparent
+		border: none
+		padding: 10px 20px 10px
+		border-bottom: 1px solid lighten($dark-color, 10%)
+		color: lighten($dark-color, 30%)
+		transition: all .3s
+		margin-bottom: 20px
+		margin-right: 20px
+		&:hover
+			color: lighten($dark-color, 50%)
+			i 
+				color: #b12a2a
+		i 
+			font-size: em(20)
+			margin-right: 10px
+	&-btn
+		padding: 10px 15px
+
+.main-foot
+	color: #fff
+	padding: 60px 0
+	&__head
+		margin-top: 0
+		margin-bottom: 30px
+	&__desc
+		opacity: .6
+		font-size: em(14)
+		line-height: em(28)
+		margin-bottom: 40px
+	&__img
+		margin: 5px -10px
+		min-height: 80px
+		background-size: cover
+		background-position: center center
+	&__info
+		opacity: .9
+		margin-bottom: 15px
+		font-size: em(14)
+		a 
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		i 
+			margin-right: 10px
+			font-size: em(18)
+	&__soc
+		margin-bottom: 15px
+		font-size: em(14)
+		i 
+			text-align: center
+			margin-right: 15px
+			font-size: em(18)
+			display: inline-block
+			line-height: 30px
+			width: 30px
+			height: 30px
+			border-radius: 10em
+			background-color: $accent-color
+		a 
+			text-decoration: underline
+			text-transform: uppercase
+			&:hover
+				text-decoration: none
+	
+			
+			
+
+
+@import "media"
