@@ -5,22 +5,78 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.mian-menu
+		display: none
+		position: absolute
+		top: 74px
+		width: 200px
+		left: -124px
+		background-color: rgba(#000, .9)
+		z-index: 100
+		ul
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				top: -39px
+				right: 10px
+				border: 20px solid transparent
+				border-bottom: 20px solid rgba(0,0,0,.9)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.sl
+		&-head
+			.slick-next
+				right: -40px
+			.slick-prev
+				left: -40px
+		&__title
+			margin-top: 20px
+			font-size: em(41)
+		&__desc
+			margin-bottom: 20px
+	.mian-menu
+		left: -143px
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	.sl
+		&-head
+			padding-top: 10px
+			text-align: center
+			.buttons
+				margin-bottom: 20px
+	.carousel
+		&-head
+			&__title
+				margin-bottom: 10px
+			&__desc
+				margin-bottom: 30px
+	.toggle-mnu
+		height: 28px
+	.mian-menu
+		left: 486px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.sl
+		&-head
+			text-align: left
+	.logo
+		img
+			width: 40px
+			height: 40px
+		&__head
+			font-size: em(20)
+			padding-left: 0px
+	.mobile
+		&__title
+			font-size: em(11)
+		&__call
+			font-size: em(16)
 
 
 /* Custom, iPhone Retina */
@@ -52,5 +108,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.mian-menu
+		display: block!important
+			
 
