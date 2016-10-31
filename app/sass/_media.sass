@@ -15,18 +15,26 @@
 		left: -250px
 		background-color: rgba(#000, .95)
 		z-index: 100
+		padding: 20px 0
+		border-radius: 20px
 		ul
 			position: relative
 			&:before
 				content: ""
 				position: absolute
-				top: -39px
+				top: -58px
 				right: 10px
 				border: 20px solid transparent
 				border-bottom: 20px solid rgba(0,0,0,.9)
 	.main-menu__item
 		display: block
 		text-align: left
+		padding: 0
+		i 
+			margin: 10px 10px 10px 20px
+		a 
+			padding: 15px 5px
+			display: inline-block
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -41,6 +49,29 @@
 			font-size: em(41)
 		&__desc
 			margin-bottom: 20px
+	.main-manu--foot
+		margin-bottom: 40px
+		.main-menu__item
+			a
+				padding: 10px 5px
+				display: inline-block
+	.main-foot__head--center
+		margin-bottom: 10px
+		text-align: center
+	.intst
+		margin-bottom: 30px
+	.main-foot
+		&__head
+			&-soc
+				text-align: center
+	ul
+		text-align: center
+		.main-foot__info
+			text-align: left
+		.main-foot__soc
+			display: inline-block
+			margin: 5px 10px
+
 
 
 
@@ -68,8 +99,16 @@
 		top: 77px
 		ul
 			&:before
-				top: -39px
 				right: 121px
+	.sl
+		&-second
+			.slick-next
+				right: -10% 
+				top: 30%
+			.slick-prev
+				left: -10%
+				top: 30%
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -93,6 +132,8 @@
 		ul
 			&:before
 				right: 122px
+	.contanct 
+		margin: 45px 0
 
 
 /* Custom, iPhone Retina */
