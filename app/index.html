@@ -60,7 +60,7 @@
 
 <body>
 
-	<header class="main-head">
+	<header id="head" class="main-head">
 		<div class="bgi-head" style="background-image: url(img/bg.jpg)"></div>
 		<div class="bgc-head"></div>
 
@@ -87,10 +87,10 @@
 							<a href="#" class="toggle-mnu hidden-lg"><span></span></a>
 							<nav class="mian-menu">
 								<ul>
-									<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Начало</a></li>
-									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать пиццу</a></li>
-									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать закуску</a></li>
-									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать напитки</a></li>
+									<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#head">Начало</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#pizza">Выбрать пиццу</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#snack">Выбрать закуску</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#drink">Выбрать напитки</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -108,7 +108,7 @@
 						<div class="col-md-4 col-md-push-1 col-sm-5">
 							<h1 class="sl__title carousel-head__title">Пицца <br> Неополетана</h1>
 							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 						<div class="col-md-6 col-md-push-1 col-sm-7">
 							<div class="sl__img">
@@ -121,7 +121,7 @@
 						<div class="col-md-4 col-md-push-1 col-sm-5">
 							<h1 class="sl__title carousel-head__title">Пицца <br> Пепперони</h1>
 							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="3"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 						<div class="col-md-6 col-md-push-1 col-sm-7">
 							<div class="sl__img">
@@ -134,7 +134,7 @@
 						<div class="col-md-4 col-md-push-1 col-sm-5">
 							<h1 class="sl__title carousel-head__title">Пицца <br> Тропициана</h1>
 							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="5"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 						<div class="col-md-6 col-md-push-1 col-sm-7">
 							<div class="sl__img">
@@ -155,7 +155,7 @@
 				
 				<div class="select-pizza clearfix">
 					<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
-					<h2 class="sect__head select-pizza__head">Выбрать пиццу</h2>
+					<h2 class="sect__head select-pizza__head" id="pizza">Выбрать пиццу</h2>
 
 					<!-- слайдер -->
 					<div class="row">
@@ -165,63 +165,63 @@
 
 								<div class="sl-second__item"> 
 
-									<div class="sl-second__img">
+									<div class="sl-second__img item-height">
 										<img src="img/neapolitana.png" alt="papperony">
 										<div class="select-size clearfix">
-											<button class="select-size__btn">26</button>
-											<button class="select-size__btn">32</button>
-											<span class="price">10 руб. 50 коп.</span>
+											<button class="select-size__btn select-size__btn--active" data-id="2">26</button>
+											<button class="select-size__btn" data-id="1">32</button>
+											<span class="price">10 руб.</span>
 										</div>
 									</div>
 									<h2 class="sl-second__head">Пицца Неопалитана, 26см</h2>
 									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
 									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-									<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+									<button class="buttons" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 								</div>
 								
-								<div class="sl-second__item"> 
+								<div class="sl-second__item item-height"> 
 									<div class="sl-second__img">
 										<img src="img/pepperony.png" alt="papperony">
 										<div class="select-size clearfix">
-											<button class="select-size__btn">26</button>
-											<button class="select-size__btn">32</button>
+											<button class="select-size__btn select-size__btn--active" data-id="4">26</button>
+											<button class="select-size__btn" data-id="3">32</button>
 											<span class="price">12 руб.</span>
 										</div>
 									</div>
 									<h2 class="sl-second__head">Пицца Пепперони, 26см</h2>
 									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
 									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-									<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+									<button class="buttons" data-id="2"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 								</div>
 
-								<div class="sl-second__item"> 
+								<div class="sl-second__item item-height"> 
 									<div class="sl-second__img">
 										<img src="img/tropicana.png" alt="papperony">
 										<div class="select-size clearfix">
-											<button class="select-size__btn">26</button>
-											<button class="select-size__btn">32</button>
-											<span class="price">8 руб. 70 коп.</span>
+											<button class="select-size__btn select-size__btn--active" data-id="6">26</button>
+											<button class="select-size__btn" data-id="5">32</button>
+											<span class="price">8 руб.</span>
 										</div>
 									</div>
 									<h2 class="sl-second__head">Пицца Тропициана, 26см</h2>
 									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
 									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-									<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+									<button class="buttons" data-id="3"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 								</div>
 
-								<div class="sl-second__item"> 
+								<div class="sl-second__item item-height"> 
 									<div class="sl-second__img">
 										<img src="img/neapolitana.png" alt="papperony">
 										<div class="select-size clearfix">
 											<button class="select-size__btn">26</button>
 											<button class="select-size__btn">32</button>
-											<span class="price">10 руб. 50 коп.</span>
+											<span class="price">10 руб.</span>
 										</div>
 									</div>
 									<h2 class="sl-second__head">Пицца Неопалитана, 26см</h2>
 									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
 									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-									<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+									<button class="buttons" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 								</div>
 								
 							</div>
@@ -235,7 +235,7 @@
 		</div>
 	</section>
 
-	<section class="sect select-snack clearfix">
+	<section id="snack" class="sect select-snack clearfix">
 		<div class="bgc-head"></div>
 
 		<div class="container">	
@@ -260,58 +260,46 @@
 
 						<div class="sl-second__item sl-snack__item"> 
 							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat1.jpg')"></div>
-							<div class="sl-snack__round">
-								<div class="sl-snack__price">4 руб. 3 коп.</div>
-								<div class="sl-snack__size">123 г.</div>
-							</div>
+							<div class="sl-snack__round"><span>4,3 руб. <br> 123 г.</span></div>
 							<div class="sl-snack__content">
 								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
 								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
 							</div>
 							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-							<button class="buttons sl-snack__btn"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons sl-snack__btn" data-id="7"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item sl-snack__item"> 
 							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat2.jpg')"></div>
-							<div class="sl-snack__round">
-								<div class="sl-snack__price">4 руб. 3 коп.</div>
-								<div class="sl-snack__size">123 г.</div>
-							</div>
+							<div class="sl-snack__round"><span>6 руб. <br> 100 г.</span></div>
 							<div class="sl-snack__content">
-								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
+								<h2 class="sl-second__head sl-snack__head">Салат морской</h2>
 								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
 							</div>
 							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-							<button class="buttons sl-snack__btn"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons sl-snack__btn" data-id="8"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item sl-snack__item"> 
 							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat3.jpg')"></div>
-							<div class="sl-snack__round">
-								<div class="sl-snack__price">4 руб. 3 коп.</div>
-								<div class="sl-snack__size">123 г.</div>
-							</div>
+							<div class="sl-snack__round"><span>8,5 руб. <br> 150 г.</span></div>
 							<div class="sl-snack__content">
-								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
+								<h2 class="sl-second__head sl-snack__head">Салат с сыром фета и помидорами</h2>
 								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
 							</div>
 							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-							<button class="buttons sl-snack__btn"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons sl-snack__btn" data-id="9"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item sl-snack__item"> 
 							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat1.jpg')"></div>
-							<div class="sl-snack__round">
-								<div class="sl-snack__price">4 руб. 3 коп.</div>
-								<div class="sl-snack__size">123 г.</div>
-							</div>
+							<div class="sl-snack__round"><span>7 руб. <br> 150 г.</span></div>
 							<div class="sl-snack__content">
 								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
 								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
 							</div>
 							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
-							<button class="buttons sl-snack__btn"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons sl-snack__btn" data-id="7"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 					</div>
@@ -320,7 +308,7 @@
 		</div>
 	</section>
 
-<section class="sect select-drink">
+<section id="drink" class="sect select-drink">
 	<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
 	<div class="container">
 		<div class="row">
@@ -342,7 +330,7 @@
 							</div>
 							<h4 class="sl-drink__head">Кока-кола, 1,5л.</h4>
 							<p class="sl-drink__price"><span>2</span> руб.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="10"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item">
@@ -351,7 +339,7 @@
 							</div>
 							<h4 class="sl-drink__head">Фанта, 1,5л.</h4>
 							<p class="sl-drink__price"><span>2</span> руб.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="11"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item">
@@ -360,7 +348,7 @@
 							</div>
 							<h4 class="sl-drink__head">Спрайт, 1,5л.</h4>
 							<p class="sl-drink__price"><span>2</span> руб.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="12"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 						<div class="sl-second__item">
@@ -369,7 +357,7 @@
 							</div>
 							<h4 class="sl-drink__head">Кока-кола, 1 л.</h4>
 							<p class="sl-drink__price"><span>1,6</span> руб.</p>
-							<button class="buttons"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+							<button class="buttons" data-id="10"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
 						</div>
 
 
@@ -396,11 +384,11 @@
 		</div>
 	</section>
 
-	<section class="sect contanct">
+	<section id="contanct" class="sect contanct">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
-					<form class="main-form">
+					<form id="main-form" class="main-form">
 						<h3 class="main-form__head">Адрес и время доставки</h3>
 						<p class="main-form__desc">Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли убедиться в том, что ваш заказ нашел вас:</p>
 						<div class="row">
@@ -440,7 +428,7 @@
 							<textarea name="text" id="comm_z"></textarea>
 						</label>
 						
-					</form>
+					
 				</div>
 				<div class="col-md-5">
 
@@ -448,22 +436,12 @@
 						<div class="order-wrap">
 							<h2 class="order__head">Ваш <span>Заказ</span></h2>
 							<div class="order__items">
-								<div class="oreder__item clearfix">
-									<button class="order__item-del"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
-									<p class="order__item-line">Кола 1,5л.............................1 шт./ 2р.</p>
-								</div>
-								<div class="oreder__item">
-									<button class="order__item-del"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
-									<p class="order__item-line">Пицца "Пепперони".............1 шт./ 8р.</p>
-								</div>
-								<div class="oreder__item">
-									<button class="order__item-del"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
-									<p class="order__item-line">Пицца "Неополетана"...........1 шт./ 9р.</p>
-								</div>
+								<span>Ваш заказ пуст :(</span>
 							</div>
-							<h2 class="order__result">Итого: <span>6 рублей.</span></h2>
+							<h2 class="order__result">Итого: <span id ="valresult">0 руб.</span></h2>
 							<button class="button order__reset"><i class="fa fa-times" aria-hidden="true"></i>Сбросить</button>
-							<button class="buttons order-btn"><i class="fa fa-check" aria-hidden="true"></i>Оформить</button>
+							<button class="buttons order-btn" from="#main-form" type="submit"><i class="fa fa-check" aria-hidden="true"></i>Оформить</button>
+							</form>
 						</div>
 					</div>
 
@@ -494,10 +472,10 @@
 						<h4 class="main-foot__head">Заказать</h4>
 						<nav class="main-manu--foot">
 							<ul>
-								<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Начало</a></li>
-								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать пиццу</a></li>
-								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать закуску</a></li>
-								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Выбрать напитки</a></li>
+								<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#head">Начало</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#pizza">Выбрать пиццу</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#snack">Выбрать закуску</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#drink">Выбрать напитки</a></li>
 							</ul>
 						</nav>
 					</div>
