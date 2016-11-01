@@ -34,8 +34,8 @@ $(function() {
 	});
 
 	Card = [];
-    //Вывод состояния rjhpbys
-	function CheckBuy(){
+	 //Вывод состояния rjhpbys
+	 function CheckBuy(){
 		var total = 0;
 		$(".order__items").empty().append("<span>Ваш заказ пуст :(</span>");
 		for (var i = 0; i < Card.length; i++){
@@ -43,14 +43,22 @@ $(function() {
 			if (!elem)
 				continue;
 
+			function dotes(toLenght, char, start, end){ 
+				var needAdd = toLenght - (start.length + end.length); 
+				for(var i = 0; i<needAdd;i++) 
+					start+=char; 
+				start+=end; 
+				return start; 
+			}
+
 			total += elem.price * elem.count;
 			var txt = "<div class ='oreder__item'> "+
-							"<button class='order__item-del' data-num='"+i+"'>"+
-								"<i class='fa fa-times-circle' aria-hidden='true'></i>"+
-							"</button>"+
-							"<p class='order__item-line'>"+elem.name+ " " + elem.count +" шт./"+elem.price+"р.</p>"+ "</div>"
-		    $(".order__items span").empty()
-		    $(".order__items").append(txt);
+			"<button class='order__item-del' data-num='"+i+"'>"+
+			"<i class='fa fa-times-circle' aria-hidden='true'></i>"+
+			"</button>"+
+			"<p class='order__item-line'>"+dotes(40, ". ", elem.name, elem.count +" шт./"+elem.price+"р.")+"</p>"
+			$(".order__items span").empty()
+			$(".order__items").append(txt);
 		}
 
 		$("#valresult").text(total + " руб.");
@@ -82,20 +90,20 @@ $(function() {
 
 		CheckBuy();
 	});
-    //Изменение размера пиццы
-	$(".select-size__btn").click(function(){
+	 //Изменение размера пиццы
+	 $(".select-size__btn").click(function(){
 		var current = $(this);
 		var id = current.attr("data-id");
 		current.parent().
-				parent().
-				siblings("button").attr("data-id", id);
+		parent().
+		siblings("button").attr("data-id", id);
 		current.addClass("selected");
 
-	});
+	 });
 	//Очистка корзины
 	$(".order__reset").click(function(){
-			Card.splice(0, Card.length);
-			CheckBuy();
+		Card.splice(0, Card.length);
+		CheckBuy();
 	});
 
 	//mobile menu
@@ -110,7 +118,7 @@ $(function() {
 		arrows: true,
 		autoplay: true, //автоматический показ
 		autoplaySpeed: 5000, //время которое будет показан слайд
-		speed: 500, //время перехода слайда
+		speed: 900, //время перехода слайда
 		responsive: [
 		{
 			breakpoint: 860,
@@ -151,6 +159,10 @@ $(function() {
 		}
 	} catch(err) {
 	};
+
+	$(".buttons").click(function(){
+		$(this).children("i").css({"transform":"rotate(360deg)"});
+	});
 
 
 });

@@ -3,6 +3,12 @@
 @import "libs"
 
 
+@keyframes rowarr
+	0%
+
+	100%
+
+
 .sect
 	position: relative
 	&__head
@@ -49,6 +55,7 @@
 			color: #fff
 			font-family: "Roboto Condensed", sans-serif
 			margin-right: 5px
+			+transition(all .2s ease-out)
 			&:hover
 				border: 2px solid darken($accent-color, 10%)
 			&--active 
@@ -338,11 +345,6 @@
 		font-size: em(14)
 		line-height: em(28)
 		margin-bottom: 40px
-	&__img
-		margin: 5px -10px
-		min-height: 80px
-		background-size: cover
-		background-position: center center
 	&__info
 		opacity: .9
 		margin-bottom: 15px
@@ -372,7 +374,35 @@
 			text-transform: uppercase
 			&:hover
 				text-decoration: none
-	
+
+.inst-img
+	span
+		position: relative
+		text-align: center
+		display: block
+		.main-foot__img
+			margin: 5px -10px
+			min-height: 80px
+			background-size: cover
+			background-position: center center
+			transition: all .2s ease-out
+		i
+			position: absolute
+			opacity: 0
+			font-size: 45px
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%) translateY(50%)
+			transition: all .4s ease-out
+
+		&:hover
+			.main-foot__img
+				transform: translateY(-110%)
+				opacity: 0
+			i 
+				opacity: 1
+				bottom: 50%
+			
 			
 			
 
