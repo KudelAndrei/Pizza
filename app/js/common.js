@@ -52,11 +52,9 @@ $(function() {
 			}
 
 			total += elem.price * elem.count;
-			var txt = "<div class ='oreder__item'> "+
-			"<button class='order__item-del' data-num='"+i+"'>"+
+			var txt = "<b class='order__item-del' data-num='"+i+"'>"+
 			"<i class='fa fa-times-circle' aria-hidden='true'></i>"+
-			"</button>"+
-			"<p class='order__item-line'>"+dotes(40, ". ", elem.name, elem.count +" шт./"+elem.price+"р.")+"</p>"
+			"<p class='order__item-line'>"+dotes(40, ". ", elem.name, elem.count +" шт./"+elem.price+"р.")+"</p>"+"</b>";
 			$(".order__items span").empty()
 			$(".order__items").append(txt);
 		}
