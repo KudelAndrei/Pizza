@@ -3,12 +3,6 @@
 @import "libs"
 
 
-@keyframes rowarr
-	0%
-
-	100%
-
-
 .sect
 	position: relative
 	&__head
@@ -164,16 +158,21 @@
 		&__item
 			background-color: #FFF
 			text-align: center
+			overflow: hidden
+			&:hover
+				.sl-snack__img
+					transform: scale(1.2)	
 		&__img
 			width: 100%
 			height: 200px
+			transition: all ease-in-out 0.5s
 		&__head
 			margin-top: -50px
 			margin-bottom: 30px
 		&__round
 			background-color: $accent-color
 			display: inline-block
-			transform: translateY(-50%)
+			transform: translateY(-50%) 
 			text-align: center
 			border-radius: 10em
 			width: 124px
@@ -211,6 +210,7 @@
 			img
 				width: 100%
 				transition: all .3s 
+				display: inline-block
 		&__head
 			margin-bottom: 0
 		&__price
@@ -221,6 +221,23 @@
 			margin-bottom: 30px
 			span
 				font-size: em(24)
+
+@keyframes pizzarotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+
+.sl-second__img
+	&-pizza
+		border-radius: 12% 12% 0 0
+		img
+			transition: all ease-in-out .5s
+			animation: pizzarotate 35s infinite linear running //анмация проигрывает бесконечно
+		&:hover
+			img
+				animation-play-state: paused
+				
 
 .soaftor
 	position: relative
@@ -296,6 +313,7 @@
 	&__item
 		&-del
 			cursor: pointer
+			transition: all ease .3s
 			i
 				display: block
 				float: left
@@ -350,8 +368,9 @@
 		i 
 			font-size: em(20)
 			margin-right: 10px
-	&-btn
-		padding: 10px 15px
+
+.buttons.order-btn
+	padding: 10px 15px
 
 .main-foot
 	color: #fff
